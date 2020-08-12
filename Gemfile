@@ -41,3 +41,5 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'graphiql-rails'
 gem 'graphql', '~> 1.9'
+
+gem 'graphql_playground-rails', group: :development
