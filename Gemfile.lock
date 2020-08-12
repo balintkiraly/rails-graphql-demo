@@ -70,6 +70,8 @@ GEM
       railties
       sprockets-rails
     graphql (1.11.2)
+    graphql_playground-rails (2.1.0)
+      rails (>= 5.1.0)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     listen (3.2.1)
@@ -151,6 +153,7 @@ DEPENDENCIES
   byebug
   graphiql-rails
   graphql (~> 1.9)
+  graphql_playground-rails
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
