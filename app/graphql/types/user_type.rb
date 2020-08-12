@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Types
-  class PostType < Types::BaseObject
+  class UserType < Types::BaseObject
     description 'A User'
     field :id, ID, null: false
     field :first_name, String, null: false

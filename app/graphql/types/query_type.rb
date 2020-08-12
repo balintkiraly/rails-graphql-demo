@@ -9,5 +9,11 @@ module Types
     def test_field
       "Hello World!"
     end
+
+     field :users, [Types::UserType], null: false,
+      description: "Returns a list of Users"
+    def users
+      User.all
+    end
   end
 end
