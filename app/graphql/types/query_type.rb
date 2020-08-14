@@ -21,5 +21,11 @@ module Types
     def me
       context[:current_user]
     end
+
+    field :groups, [Types::GroupType], null: true,
+      description: "Returns a list of Groups"
+    def groups
+      Group.all
+    end
   end
 end
