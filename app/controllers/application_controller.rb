@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::API
   include ActionController::Helpers
+  include Pundit
 
   class NoTokenProvided < StandardError; end
   class CouldNotFindUser < StandardError; end
@@ -18,7 +19,6 @@ class ApplicationController < ActionController::API
 
     @user = Authentication::AuthenticateUser.call(token)
     raise CouldNotFindUser if @user.blank?
-
     @user
   end
 

@@ -3,6 +3,8 @@ module Types
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
+    include Pundit
+
     # TODO: remove me
     field :test_field, String, null: false,
       description: "An example field added by the generator"
@@ -19,13 +21,17 @@ module Types
     field :me, Types::UserType, null: true,
       description: "Returns the currently signed in User"
     def me
-      context[:current_user]
+      current_user
     end
 
     field :groups, [Types::GroupType], null: true,
       description: "Returns a list of Groups"
     def groups
-      Group.all
+      policy_scope(Group)
+    end
+
+    def current_user
+      context[:current_user]
     end
   end
 end
