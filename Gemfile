@@ -34,6 +34,10 @@ gem 'faraday', '~> 1.0', '>= 1.0.1'
 gem 'jwt', '~> 2.2', '>= 2.2.1'
 gem 'oauth2', '~> 1.4', '>= 1.4.4'
 
+# Gem for authorization
+#
+gem 'pundit', '~> 2.1'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::API
   include ActionController::Helpers
+  include Pundit
 
   class NoTokenProvided < StandardError; end
   class CouldNotFindUser < StandardError; end
