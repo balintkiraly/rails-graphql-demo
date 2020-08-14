@@ -10,10 +10,16 @@ module Types
       "Hello World!"
     end
 
-     field :users, [Types::UserType], null: false,
+    field :users, [Types::UserType], null: false,
       description: "Returns a list of Users"
     def users
       User.all
+    end
+
+    field :me, Types::UserType, null: true,
+      description: "Returns the currently signed in User"
+    def me
+      context[:current_user]
     end
   end
 end
