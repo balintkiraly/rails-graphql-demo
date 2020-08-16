@@ -7,5 +7,6 @@ module Types
     field :first_name, String, null: false
     field :last_name, String, null: false
     field :oauth_id, String, null: false
+    field :groups, [Types::GroupType], null: true
   end
 end

@@ -8,3 +8,9 @@
 User.create(first_name: 'Elek', last_name: 'Teszt', oauth_id: '69420')
 User.create(first_name: 'Srác', last_name: 'Phps', oauth_id: '123456')
 User.create(first_name: 'Károly', last_name: 'Coder', oauth_id: 'alma')
+
+Group.create(name: "KIR-DEV", user: User.first)
+Group.create(name: "SEM", user: User.second)
+# Generate JWT for the first user for testing
+# payload    = {user_id: 1}
+#  JWT.encode payload, ENV['SECRET_KEY_BASE'], 'HS256'
